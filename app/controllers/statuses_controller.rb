@@ -1,8 +1,9 @@
 class StatusesController < ApplicationController
   before_action :set_status, only: [:show, :edit, :update, :destroy]
-
   # GET /statuses
   # GET /statuses.json
+
+
   def index
     @statuses = Status.all
   end
@@ -14,8 +15,9 @@ class StatusesController < ApplicationController
 
   # GET /statuses/new
   def new
-    @status = Status.new
-  end
+     @status = Status.new
+   end
+
 
   # GET /statuses/1/edit
   def edit
@@ -24,7 +26,7 @@ class StatusesController < ApplicationController
   # POST /statuses
   # POST /statuses.json
   def create
-    @status = Status.new(status_params)
+     @status = Status.new(status_params)
 
     respond_to do |format|
       if @status.save
